@@ -1,0 +1,25 @@
+<div class="cuadrado" style="border-color: #333333;">
+    <div class="row">
+        <div class="col">
+            <form action="/admin/login" method="post" style="margin-top: 80px;">
+                <div class="form-group">
+                    <label for="inputUsuario3" class="col-sm-2 col-form-label">Usuario</label>
+                    <input type="text" class="form-control sesion" id="inputUsuario3" style="border-color: #333333;">
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                    <input type="password" class="form-control sesion" id="inputPassword3"
+                        style="border-color: #333333;">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+
+            </form>
+
+            {{#if error}}
+            <p>Usuario o contraseña incorrecto </p>
+            {{/if}}
+        </div>
+    </div>
+</div>
