@@ -255,7 +255,9 @@ margin: 30px 0px;
     width: 100%;
 }
 
-
+.turismobtn {
+    text-decoration: none;
+}
 .turismo { /*titulo seccion turismo*/
     font-weight: 700;
     font-size: 35px;
@@ -486,7 +488,7 @@ h3 {
 }
 
 .isollina {
-    background: url(/fotos/isolina.jpg);
+    background: url(/fotos/dique.jpg);
     background-size: cover;
     background-position: center;
     height: 350px;
@@ -616,7 +618,7 @@ margin-right: 40px;
     width: 700px;
     height: 400px;
     background-color: #f2f2f2;
-    margin: auto;
+    margin: 100px auto;
     border-radius: 10px;
     border-color: #333333;
 }

@@ -20,9 +20,9 @@ router.get('/', function(req, res, next) {
         var data = await usuariosModel.getUserAndPassword(usuario, password);
 
         if (data != undefined) {
-            res.redirect('/admin/novedades');
+            res.redirect('/');
         } else {
-            res.render('andmin/login', {
+            res.render('admin/login', {
                 layout: 'admin/layout',
                 error: true
             })
