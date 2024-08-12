@@ -1,4 +1,5 @@
 require('dotenv').config();
+var session = require('express-session');
 
 var createError = require('http-errors');
 var express = require('express');
@@ -25,6 +26,25 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret: '81dc9bdb52d04dc20036dbd8313ed055',
+  resave: false,
+  saveUninitialized: true
+}))
+
+secured = async (req, res, next) => {
+  try {
+    console.log(req.session.id_usuario);
+    if (req.session.id_usuario) {
+      next();
+    } else {
+      res.redirect('/admin/login')
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
