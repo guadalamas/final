@@ -12,7 +12,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var turismoRouter = require('./routes/turismo');
 var giardinoRouter = require('./routes/giardino');
-var loginRouter = require('./routes/admin/login')
+var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/novedades');
 
 var app = express();
