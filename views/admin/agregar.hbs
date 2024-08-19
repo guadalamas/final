@@ -1,22 +1,18 @@
-<div class="cuadrado" style="border-color: #333333;">
+<div class="cuadrado" style="background-color: #33333375;">
     <div class="row">
         <div class="col-6 offset-3">
-            <h4>Agregar una nueva novedad</h4>
-            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data" style="margin-top: 80px;">
+            <h4 class="modific">Agregar una nueva novedad</h4>
+            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data" style="margin-top: 20px;">
                 <div class="form-group">
-                    <input type="text" class="form-control sesion" placeholder="Titulo" style="border-color: #333333;"
+                    <input type="text" class="form-control" placeholder="Titulo" style="border-color: #333333;"
                         name="titulo">
                 </div>
 
                 <div class="form-group">
-                    <textarea class="form-control" placeholder="Subtitulo" name="subtitulo"></textarea>
+                    <textarea class="form-control" placeholder="Subtitulo" name="subtitulo" style="border-color: #333333;"></textarea>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" placeholder="Cuerpo" name="cuerpo"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label>Imagen <input type="file" class="form-control" name="imagen" id="imagen"></label>
+                    <textarea class="form-control" placeholder="Cuerpo" name="cuerpo" style="border-color: #333333;"></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Guardar</button>

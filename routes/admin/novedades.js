@@ -5,12 +5,31 @@ var novedadesModel = require('../../models/novedadesModel');
 
 var util = require('util');
 var cloudinary = require('cloudinary').v2;
-var uploader = until.promisify(cloudinary.uploader.upload);
+var uploader = util.promisify(cloudinary.uploader.upload);
 
 
 router.get('/', async function (req, res, next) {
 
     var novedades = await novedadesModel.getNovedades();
+
+    novedades = novedades.map(novedad => {
+        if (novedad.img_id) {
+            const imagen = cloudinary.image(novedad.img_id, {
+                widht: 50,
+                height: 50,
+                crop: 'fill'
+            });
+            return {
+                ...novedad,
+                imagen
+            }
+        } else {
+            return {
+                ...novedad,
+                imagen: ''
+            }
+        }
+    })
 
     res.render('admin/novedades', {
         layout: '/admin/layout',

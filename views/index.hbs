@@ -165,16 +165,14 @@
     </button></a>
 
 <!--novedades-->
-<div class="row my-3">
-    <div id="novedades" class="col-md-5 offset-md-2 scroll_section">
-        <h2>Novedades</h2>
-        <ul class="lista-novedades">
+<h1 class="titulos center scroll-seccion" id="space">Novedades</h1>
+<div class="row my-3 scroll_section">
+    <div>
             {{#each novedades}}
-
-            <li class="novedad-list">
+            <div class="novedad-list">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#Modal{{id}}">{{titulo}}
                 </a>
-            </li>
+            </div>
             {{/each}}
 
         </ul>
@@ -185,12 +183,13 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                                <h2 class="modaltitle">{{titulo}}</h2>
                 <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h2>{{titulo}}</h2>
-                <h3>{{subtitulo}}</h3>
+
+                <h3 class="modalsubtitle">{{subtitulo}}</h3>
                 <p>{{cuerpo}}</p>
             </div>
         </div>
