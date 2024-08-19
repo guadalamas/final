@@ -11,12 +11,19 @@
     </div>
 
     <div class="row">
-        <div class="col-7" style="margin-top: -9px;">
+        <div class="col-2" style="margin-top: -9px;">
             <h2>listado de noticias más importantes</h2>
         </div>
         <div class="col-5 text-right">
-            <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fas fa-plus"></i>nuevo</a>
+            <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fas fa-plus"></i>Nuevo</a>
         </div>
+        <div class="col-3 text-right">
+            <form class="form-inline" action="/admin/novedades" method="get">
+            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" name="q">
+            <button class="btn btn-secondaty my-2 my-sm-0" type="submit"> <i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+        </div>
+
     </div>
 
     <div class="row">
