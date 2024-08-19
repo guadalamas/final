@@ -628,3 +628,25 @@ margin-right: 40px;
     border-radius: 10px;
     border-color: #333333;
 }
+
+/*novedades*/
+
+.lista-novedades {
+    list-style: none;
+    background-image: none;
+    background-color: transparent;
+    color: #333333;
+}
+
+.lista-novedades li {
+    background-image: none;
+    background-color: #4c6b24;
+}
+
+.lista-novedades a {
+    text-decoration: none;
+    text-underline-offset: none;
+    color: #f2f2f2;
+    font-size: larger;
+    font-weight: 600;
+}
