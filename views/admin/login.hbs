@@ -4,18 +4,19 @@
             <form action="/admin/login" method="post" style="margin-top: 80px;">
                 <div class="form-group">
                     <label for="usuario" class="col-sm-2 col-form-label">Usuario</label>
-                    <input type="text" class="form-control sesion" id="usuario" aria-describedby="emailHelp" style="border-color: #333333;" name="usuario">
+                    <input type="text" class="form-control sesion" id="usuario" aria-describedby="emailHelp"
+                        style="border-color: #333333;" name="usuario">
                 </div>
 
                 <div class="form-group">
                     <label for="password" class="col-sm-2 col-form-label">Clave</label>
-                    <input type="password" class="form-control sesion" id="password"
-                        style="border-color: #333333;" name="password">
+                    <input type="password" class="form-control sesion" id="password" style="border-color: #333333;"
+                        name="password">
                 </div>
 
-                            {{#if error}}
-            <p>Usuario o contraseña incorrecto </p>
-            {{/if}}
+                {{#if error}}
+                <p>Usuario o contraseña incorrecto </p>
+                {{/if}}
 
                 <button type="submit" class="btn btn-primary">Enviar</button>
 

@@ -168,35 +168,35 @@
 <h1 class="titulos center scroll-seccion" id="space">Novedades</h1>
 <div class="row my-3 scroll_section">
     <div>
-            {{#each novedades}}
-            <div class="novedad-list">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#Modal{{id}}">{{titulo}}
-                </a>
-            </div>
-            {{/each}}
+        {{#each novedades}}
+        <div class="novedad-list">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#Modal{{id}}"><img src="{{imagen}}"> {{titulo}}
+            </a>
+        </div>
+        {{/each}}
 
         </ul>
     </div>
 
-                {{#each novedades}}
-<div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                                <h2 class="modaltitle">{{titulo}}</h2>
-                <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <h3 class="modalsubtitle">{{subtitulo}}</h3>
-                <p>{{cuerpo}}</p>
+    {{#each novedades}}
+    <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modaltitle">{{titulo}}</h2>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{imagen}}">
+                    <h3 class="modalsubtitle">{{subtitulo}}</h3>
+                    <p>{{cuerpo}}</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-            {{/each}}
+    {{/each}}
 
 </div>
 
