@@ -101,4 +101,26 @@ router.get('/modificar/:id', async (req, res, next) => {
     });
 });
 
+router.get('/modificar/', async (req, res, next) => {
+    try {
+        var obj = {
+            titulo: req.body.titulo,
+            subtitulo: req.body.subtitulo,
+            cuerpo: req.body.cuerpo
+        }
+
+        console.log(obj)
+
+        await novedadesModel.modificarNovedadById(obj, req.body.id);
+        res.redirect('/admin/novedades');
+    } catch (error) {
+        console.log(error)
+        res.render('admin/modificar', {
+            layout: 'admin/layout',
+            error: true,
+            message: 'No se puede modificar la novedad'
+        })
+    }
+    });
+
 module.exports = router;
